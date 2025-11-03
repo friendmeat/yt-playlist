@@ -1,0 +1,17 @@
+
+.yt-playlist-container {
+    width: 240px;
+
+}
+
+.my-yt-playlist {
+    display: block;
+}
+
+.my-yt-playlist::part(yt-playlist-video-list){
+    height: 250px;
+}
+
+.my-yt-playlist::part(yt-playlist-item-active){
+    background-color:grey;
+}
