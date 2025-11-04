@@ -1,9 +1,13 @@
 {
   "name": "@friendmeat/yt-playlist-element",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Minimal YouTube playlist custom element",
+  "main": "dist/main.js",
   "type": "module",
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/friendmeat/yt-playlist/"
+  },
   "scripts": {
     "build": "pnpm exec webpack"
   },
