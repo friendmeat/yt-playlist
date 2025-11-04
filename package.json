@@ -9,12 +9,11 @@
     "url":"https://github.com/friendmeat/yt-playlist/"
   },
   "scripts": {
-    "build": "pnpm exec webpack"
+    "build": "npm exec webpack --mode=development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.15.0",
   "devDependencies": {
     "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1"
