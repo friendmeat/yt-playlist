@@ -1,10 +1,10 @@
 {
-  "name": "yt-playlist",
-  "version": "1.0.0",
+  "name": "@friendmeat/yt-playlist-element",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build":"pnpm exec webpack"
   },
   "keywords": [],
   "author": "",
