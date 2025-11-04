@@ -4,15 +4,15 @@
   "description": "Minimal YouTube playlist custom element",
   "main": "dist/main.js",
   "type": "module",
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/friendmeat/yt-playlist/"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/friendmeat/yt-playlist/"
   },
   "scripts": {
     "build": "npm exec webpack --mode=development"
   },
   "keywords": [],
-  "author": "",
+  "author": "friendmeat",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.102.1",
