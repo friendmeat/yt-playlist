@@ -11,7 +11,7 @@ custom element for displaying a list of YouTube videos
 ```
 
 # Style
-The `yt-playlist` custom element contains a [shadow root](), so global styles will not effect it. Use the following [`part`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-elements to style the playlist. 
+The `yt-playlist` custom element contains a [shadow root](https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot), so global styles will not effect it. Use the following [`part`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::part) pseudo-elements to style the playlist. 
 
 ```css
 yt-playlist::part(yt-playlist-video-list){
