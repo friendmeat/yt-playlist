@@ -2,12 +2,33 @@
 custom element for displaying a list of YouTube videos
 
 # Usage
+
+## JSON Playlist Data
+
+**id**: YouTube video ID 
+**title**: Display title for song
+**artist**: Display artist for song
+
+```json
+[
+    {"title":"Brick Dust", "artist":"Prison Religion", "id":"Ug3FQK3kxAE"},
+    {"title":"Constant", "artist":"Xanopticon", "id":"pZrKnHQtqsg"},
+    {"title":"River Like Spine", "artist":"Jefre Cantu-Ledesma", "id":"5P2lOjP_ozw"},
+    {"title":"Little Panda McElroy", "artist":"Xiu Xiu", "id":"X8wOehNgaMM"},
+    {"title":"Flim", "artist":"Aphex Twin", "id":"-yNHlKAzyVA"}
+]
+```
+
+## HTML
 ```html
 <head>
     <script src="/node_modules/@friendmeat/yt-playlist-element/dist/main.js" type="module"></script>
 </head>
-<!-- ... -->
-<yt-playlist data-yt-playlist-file="/playlist.json" /> 
+<!-- Use a file -->
+<yt-playlist data-yt-playlist="/playlist.json" /> 
+
+<!-- Or include data inline -->
+<yt-playlist data-yt-playlist='[{"title":"Brick Dust", "artist":"Prison Religion", "id":"Ug3FQK3kxAE"}]' />
 ```
 
 # Style
