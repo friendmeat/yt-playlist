@@ -91,9 +91,9 @@ export default class YTPlaylist extends HTMLDivElement {
         }
         </style>`;
 
-        // Get playlist from JSON on the server
-        const playlistFile = this.getAttribute("data-yt-videos")
-        this.videos = await this._getVideos(playlistFile)
+        // Get playlist from file or inline toJSON();
+        const playlistData = this.getAttribute("data-yt-playlist");
+        this.videos = await this._getVideos(playlistData);
 
         // Wrapper element
         const wrapper = document.createElement("div");
@@ -169,12 +169,19 @@ export default class YTPlaylist extends HTMLDivElement {
     }
 
     /**
-    * @param file {string} Location of playlist json file
-    */
-    async _getVideos(file) {
-        return fetch(file, {})
-            .then(res => res.json())
-            .then(data => data.map(({ id, title, artist }) => new YTMusicVideo(id, title, artist))
-            )
+     * @param fileOrArrayString {string} 
+     */
+    async _getVideos(fileOrArrayString) {
+        let data = [];
+        try {
+            // Try to parse JSON string
+            data = JSON.parse(fileOrArrayString);
+        } catch {
+            // If parse fails, try to load the string as a file
+            data = await fetch(fileOrArrayString, {})
+                .then(res => res.json())
+        }
+
+        return data.map(({ id, title, artist }) => new YTMusicVideo(id, title, artist))
     }
 }
